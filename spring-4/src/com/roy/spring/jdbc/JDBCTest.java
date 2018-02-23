@@ -1,7 +1,7 @@
 package com.roy.spring.jdbc;
 
 import static org.hamcrest.CoreMatchers.nullValue;
-import static org.junit.jupiter.api.Assertions.*;
+
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -12,7 +12,7 @@ import java.util.Map;
 import javax.sql.DataSource;
 
 import org.aspectj.weaver.AjAttribute.PrivilegedAttribute;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
