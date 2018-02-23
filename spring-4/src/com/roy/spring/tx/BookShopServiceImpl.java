@@ -22,6 +22,7 @@ public class BookShopServiceImpl implements BookShopService {
 		
 		bookShopDao.updateUserAccount(username, price);
 		
+		System.out.println("aaa");
 	}
 
 }
