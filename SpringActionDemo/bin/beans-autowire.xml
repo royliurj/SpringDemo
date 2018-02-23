@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="address" class="com.roy.spring.autowire.Address"
+		p:city="beijing">
+	</bean>
+	<bean id="car" class="com.roy.spring.autowire.Car"
+		p:brand="ford">
+	</bean>
+	
+	<bean id="car1" class="com.roy.spring.autowire.Car"
+		p:brand="Audi">
+	</bean>
+	
+	<!-- 
+	<bean id="" class="com.roy.spring.autowire.Person"
+		p:name="Roy" p:age="20" p:address-ref="address" p:car-ref="car">
+	</bean>
+	 -->
+	<!-- 可以使用autowire属性指定自动装配的方式：
+		byName：根据bean的名字和setter风格的属性名字
+		byType：根据bean的类型和当前bean的属性的类型装配
+	 -->
+	<bean id="" class="com.roy.spring.autowire.Person"
+		p:name="Roy" p:age="20" autowire="byName">
+	</bean>
+
+</beans>
