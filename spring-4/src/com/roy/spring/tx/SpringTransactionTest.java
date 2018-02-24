@@ -1,11 +1,11 @@
 package com.roy.spring.tx;
 
 import static org.hamcrest.CoreMatchers.nullValue;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
 import java.util.Arrays;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -26,6 +26,8 @@ class SpringTransactionTest {
 		bookShopDao = (BookShopDao) ctx.getBean("bookShopDao");
 		bookShopService = ctx.getBean(BookShopService.class);
 		cashier = ctx.getBean(Cashier.class);
+		
+		System.out.println("234");
 	}
 	
 	@Test
