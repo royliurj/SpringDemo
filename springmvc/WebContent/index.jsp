@@ -10,6 +10,28 @@
 Hello World
 
 	<a href="hello">Hello</a>
+	
+	<br><br>
+	
+	
+	<a href="testPathVariable/2">Path Variable</a>
+
+	<br><br>
+	<a href="tetRest/1">Test Rest Get</a>	
+	<br><br>
+	<form action="tetRest" method="post">
+		<input type="submit" value="Test Rest Post"/>
+	</form>	
+	<br><br>
+	<form action="tetRest/1" method="post">
+		<input type="hidden" name="_method" value="DELETE"/>
+		<input type="submit" value="Test Rest Delete"/>
+	</form>
+	<br><br>
+	<form action="tetRest/1" method="post">
+		<input type="hidden" name="_method" value="PUT"/>
+		<input type="submit" value="Test Rest PUT"/>
+	</form>
 
 </body>
 </html>
