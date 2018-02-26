@@ -7,7 +7,29 @@
 <title>Insert title here</title>
 </head>
 <body>
-Hello World
+
+	<form action="testPojo" method="post">
+		username:<input type="text" name="username"/><br>
+		password:<input type="password" name="password"/><br>
+		address province:<input type="text" name="address.province"/><br>
+		address city:<input type="text" name="address.city"/><br>
+		<input type="submit" value="submit"/>
+	</form>
+
+	<br>
+
+	<a href="testCookieValue">testCookieValue</a>
+
+	<br>
+
+	<a href="testRequestHeader">testRequestHeader</a>
+
+	<br>
+
+
+	<a href="testRequestParam?username=roy&age=11">testRequestParam</a>
+
+	<br>
 
 	<a href="hello">Hello</a>
 	
