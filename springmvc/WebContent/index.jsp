@@ -8,6 +8,10 @@
 </head>
 <body>
 
+	<a href="testServletAPI">test servlet api</a>
+
+	<br>
+
 	<form action="testPojo" method="post">
 		username:<input type="text" name="username"/><br>
 		password:<input type="password" name="password"/><br>
