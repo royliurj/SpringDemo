@@ -10,6 +10,8 @@
 
 	<br>
 	<a href="hello">hello</a>
+	<br>
+	<a href="testMap">test Map</a>
 
 </body>
 </html>
