@@ -6,14 +6,20 @@ import java.util.Map;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.sun.media.sound.ModelInstrumentComparator;
 import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader.Array;
 
 @Controller
+@SessionAttributes(value={"testsession"}, types= {String.class})
 public class HelloWorld {
-
+	@RequestMapping("testSession")
+	public String testSession(Map<String, Object> map) {
+		map.put("testsession", Arrays.asList("TOM","ROY"));		
+		return SUCCESS;
+	}
 	private static final String SUCCESS = "success";
 	
 	@RequestMapping(value="hello")
@@ -28,8 +34,9 @@ public class HelloWorld {
 	
 	@RequestMapping("testMap")
 	public String testMap(Map<String, Object> map) {
-		map.put("names", Arrays.asList("TOM","ROY"));		
+		map.put("names", "123");		
 		return SUCCESS;
 	}
 	
+
 }

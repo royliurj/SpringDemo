@@ -14,6 +14,14 @@
 time : ${requestScope.time}
 <br>
 names: ${requestScope.names}
+<br>
+
+testSession: ${requestScope.testsession}
+<br>
+
+testSession: ${sessionScope.testsession}
+<br>
+
 
 </body>
 </html>

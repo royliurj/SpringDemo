@@ -12,6 +12,8 @@
 	<a href="hello">hello</a>
 	<br>
 	<a href="testMap">test Map</a>
+	<br>
+	<a href="testSession">test Session</a>
 
 </body>
 </html>
