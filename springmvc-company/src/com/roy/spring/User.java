@@ -1,5 +1,7 @@
 package com.roy.spring;
 
+import com.sun.org.apache.xml.internal.resolver.helpers.PublicId;
+
 public class User {
 
 	private int id;
@@ -44,6 +46,8 @@ public class User {
 		this.password = password;
 	}
 	
-	
+	public User() {
+		
+	}
 	
 }

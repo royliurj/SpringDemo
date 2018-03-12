@@ -11,9 +11,17 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.sun.org.apache.bcel.internal.generic.NEW;
+
 @Controller
 @SessionAttributes(value={"user"}, types= {String.class})
 public class HelloWorld {
+	
+	@RequestMapping("/testUser")
+	public String testAddUser(Map<String,Object> map) {
+		map.put("aaa", new User());
+		return "input";
+	}
 	
 	@RequestMapping("testRedirect")
 	public String testRedirect() {
@@ -26,13 +34,19 @@ public class HelloWorld {
 		return "helloView";
 	}
 	
-	@ModelAttribute
-	public void getUser(@RequestParam(value="id", required=false) Integer id, Map<String, Object> map) {
-		if(id != null) {
-			User user = new User(1, "tom1", "123456");
-			map.put("user", user);
-			System.out.println("get data : " + user);
-		}
+//	@ModelAttribute
+//	public void getUser(@RequestParam(value="id", required=false) Integer id, Map<String, Object> map) {
+//		if(id != null) {
+//			User user = new User(1, "tom1", "123456");
+//			map.put("user", user);
+//			System.out.println("get data : " + user);
+//		}
+//	}
+	
+	@RequestMapping("/addUser")
+	public String testUser(User user) {
+		System.out.println(user);
+		return SUCCESS;
 	}
 	
 	@RequestMapping("testModelAttribute")

@@ -11,6 +11,14 @@ public class Employee {
 	
 	private String name;
 	
+//	private int gender;
+//	public void setGender(int gender) {
+//		this.gender = gender;
+//	}
+//	public int getGender() {
+//		return gender;
+//	}
+	
 	private Department department;
 	
 	public Department getDepartment() {
@@ -24,7 +32,6 @@ public class Employee {
 
 	
 	public Employee(int id, String name, Department department, String email) {
-		super();
 		this.id = id;
 		this.name = name;
 		this.department = department;
