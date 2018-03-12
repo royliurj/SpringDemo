@@ -5,16 +5,43 @@ import java.util.Date;
 import java.util.Map;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.sun.media.sound.ModelInstrumentComparator;
-import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader.Array;
-
 @Controller
-@SessionAttributes(value={"testsession"}, types= {String.class})
+@SessionAttributes(value={"user"}, types= {String.class})
 public class HelloWorld {
+	
+	@RequestMapping("testRedirect")
+	public String testRedirect() {
+		System.out.println("testRedirect");
+		return "redirect:/index.jsp";
+	}
+	
+	@RequestMapping("testView")
+	public String testView() {
+		return "helloView";
+	}
+	
+	@ModelAttribute
+	public void getUser(@RequestParam(value="id", required=false) Integer id, Map<String, Object> map) {
+		if(id != null) {
+			User user = new User(1, "tom1", "123456");
+			map.put("user", user);
+			System.out.println("get data : " + user);
+		}
+	}
+	
+	@RequestMapping("testModelAttribute")
+	public String testModelAttribute(User user) {
+		System.out.println(user);
+		return SUCCESS;
+	}
+	
+	
 	@RequestMapping("testSession")
 	public String testSession(Map<String, Object> map) {
 		map.put("testsession", Arrays.asList("TOM","ROY"));		

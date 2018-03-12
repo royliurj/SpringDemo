@@ -8,6 +8,21 @@
 </head>
 <body>
 
+<a href="testRedirect">testRedirect</a>
+<br>
+<a href="testView">testView</a>
+<br>
+
+	<form action="testModelAttribute" method="post">
+	
+		<input type="hidden" name="id" value="1">
+		<br>
+		<input type="text" name="name" value="tom">		
+		
+		<input type="submit" value="submit">
+	
+	</form>
+
 	<br>
 	<a href="hello">hello</a>
 	<br>
